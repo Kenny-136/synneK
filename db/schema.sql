@@ -12,8 +12,7 @@ CREATE TABLE users(
 CREATE TABLE jokes(
     jokes_id SERIAL PRIMARY KEY,
     user_id INT,
-    jokes TEXT,
-    CONSTRAINT fk_user FOREIGN KEY(user_id) REFERENCES users(id)
+    jokes TEXT
 );
 
 INSERT INTO users (name, email, password_digest) VALUES ('kenny', 'a', 'a');

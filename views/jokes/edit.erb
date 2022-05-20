@@ -1,0 +1,12 @@
+<h1>Improvise Joke</h1>
+<form action="/joke/<%= joke['jokes_id'] %>" method="POST">
+    <input type="hidden" name="_method" value="put">
+
+    <label for="">User ID: </label>
+    <input type="text" name="user_id" value="<%= joke['user_id'] %>">
+
+    <label for="">Joke: </label>
+    <input type="text" name="jokes" value="<%= joke['jokes']%>">
+
+    <button>Improvise Joke!</button>
+</form>
