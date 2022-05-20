@@ -1,0 +1,26 @@
+<h1>Dad Jokes!</h1>
+
+<section class="session-manager">
+    <a href="/sign_up">Sign up</a>
+    <a href="/login">Login</a>
+</section>
+
+<section class="add-jokes">
+    <h1>Add Jokes! </h1>
+    <form action="/jokes" method="POST">
+        <label for="">Jokes: </label>
+        <input type="text" name="Jokes" id="">
+    <button>HaHa!</button>
+    </form>
+</section>
+
+<section class="all-joke">
+<%= all_jokes.each do |joke| %>
+    <article class="dad-joke">
+        <h3><%= joke['jokes'] %></h3>
+    </article>
+<% end %>
+
+</section>
+
+</form>
