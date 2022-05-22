@@ -1,7 +1,9 @@
 require 'sinatra'
 require 'bcrypt'
-require 'HTTParty'
+require 'httparty'
 require 'pry'
+
+enable  :sessions
 
 #database
 require './db/db'

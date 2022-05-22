@@ -1,48 +1,60 @@
-<h1>Dad Jokes!</h1>
+<% if logged_in? %>
+    <header>
+        <h1 class="title"><a href="/">Dad Jokes!</a></h1>
+        <section class="session-nav">
+            <form action="/sessions" method="POST">
+                <input type="hidden" name="_method" value="delete">
+                <button id="logout-button">Log out</button>
+            </form>
+        </section>
+    </header>
+    <main>
+        <section class="css-main">
+            <article class="api-dadjokes">
+                <h1><%= api_jokes['joke']%></h1>
+            </article>
 
-<h1><%= api_jokes['joke']%></h1>
+            <section class="add-jokes">
+                <form action="/jokes" method="POST" class="add-joke-css">
 
-<section class="session-manager">
-    <a href="/sign_up">Sign up</a>
-    <a href="/login">Login</a>
-    <form action="/sessions" method="POST">
-        <input type="hidden" name="_method" value="delete">
-        <button>Log out</button>
-    </form>
-</section>
+                    <label for="jokes"></label>
+                    <input class="add-joke-input" type="text" name="jokes" placeholder="ADD JOKES!">
+                <button class="add-joke-button">HaHa!</button>
+                </form>
+            </section>
+            <section class="all-joke">
+                <% all_jokes.each do |joke| %>
+                <article class="dad-joke">
+                    <div class="joke-head">
+                        <h4><%= joke['name'] %> laughed to this joke</h4>
+                        <div class="update-delete-joke">
+                        <a href="/joke/<%= joke['jokes_id']%>/edit" id="update-joke-anchor">Improvise this Joke</a>
+                        <form class="delete-joke" action="/joke/<%= joke['jokes_id'] %>" method="POST">
+                            <input type="hidden" name="_method" value="delete">
+                            <button id="delete-joke-button">Delete</button>    
+                        </form>
+                        </div>
+                    </div>
+                    <h3><%= joke['jokes'] %></h3>
 
-<section class="add-jokes">
-    <h1>Add Jokes! </h1>
-    <form action="/jokes" method="POST">
-        <label for="">user: </label>
-        <input type="text" name="user_id" id="">
+                    
+                </article>    
+                <% end %>
+            </section>
+        </section>
+    </main>
 
-        <label for="">Jokes: </label>
-        <input type="text" name="jokes" id="">
-    <button>HaHa!</button>
-    </form>
-</section>
-
-<section class="all-joke">
-<% all_jokes.each do |joke| %>
-    <article class="dad-joke">
-        <h4>User ID: <%= joke['user_id'] %> Posted a joke!: </h4>
-        <h3><%= joke['jokes'] %></h3>
-        <a href="/joke/<%= joke['jokes_id']%>/edit">Improvise this Joke</a>
-
-        <form class="delete-joke" action="/joke/<%= joke['jokes_id'] %>" method="POST">
-            <input type="hidden" name="_method" value="delete">
-
-            <button>Delete</button>    
-        </form>
-
-
-
+<% else %>
+    <header>
+    <h1 class="title"><a href="/">Dad Jokes!</a></h1>
+        <section class="session-nav">
+            <a class="session-a" href="/sign_up">Sign up</a>
+            <a class="session-a" href="/login">Login</a> 
+        </section>
+    </header>
+    <main>
+    <article class="api-dadjokes">
+        <h1><%= api_jokes['joke']%></h1>
     </article>
-
-    
+    </main>
 <% end %>
-
-</section>
-
-</form>

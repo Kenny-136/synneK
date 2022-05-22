@@ -8,13 +8,13 @@ post '/sessions' do
 
     user = find_user_by_email(email)
    
-    #Using BCrypt to check that the user provided the correct password.
     if user && BCrypt::Password.new(user['password_digest']) == password
-        #log the user in
         session['user_id'] = user['id']
+        p session['user_id']
         redirect '/'
     end
 end
+
 
 delete '/sessions' do
     session['user_id'] = nil

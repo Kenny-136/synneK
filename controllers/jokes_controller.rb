@@ -9,7 +9,7 @@ get '/' do
 end
 
 post '/jokes' do
-    user_id = params['user_id']
+    user_id = session['user_id']
     jokes = params['jokes']
   
     create_jokes(user_id, jokes)
@@ -28,14 +28,13 @@ get '/joke/:id/edit' do
 end
 
 put '/joke/:jokes_id' do
-    user_id = params['user_id']
+    user_id = session['user_id']
     jokes = params['jokes']
     jokes_id = params['jokes_id']
 
     improvise_joke(user_id, jokes, jokes_id)
     
     redirect '/'
-    binding.pry
 end
 
 delete '/joke/:id' do

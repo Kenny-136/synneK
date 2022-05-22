@@ -1,4 +1,5 @@
 def logged_in?
+    p session['user_id']
     if session['user_id']
         return true
     else

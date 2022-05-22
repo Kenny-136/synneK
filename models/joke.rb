@@ -1,5 +1,5 @@
 def all_jokes
-    run_sql("SELECT * FROM jokes")
+    run_sql("SELECT jokes.* , users.name FROM jokes LEFT JOIN users ON jokes.user_id = users.id ORDER BY jokes_id DESC")
 end
 
 def create_jokes(user_id, jokes)
