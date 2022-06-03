@@ -1,12 +1,12 @@
-This is link will connect you to the app.
-(Because it is hosted on heroku, it will take 10 seconds to load it for the first time)
+<p>This is link will connect you to the app.</p>
+<p>Because it is hosted on heroku, it will take 10 seconds to load</p>
 https://floating-tor-64492.herokuapp.com/
 
 <h1>This is my 2nd Project in Software Engineering Immersive Course with General Assembly.</h1>
 I am making a CRUD APP, about one of small thing i enjoy in life, which is a 'dad jokes'.
 i am coding this application with Ruby Sinatra, using MVC design pattern.
 
-<p>-Full stack CRUD application based on Sinatra, Ruby.</p>
+<p>-Based on Sinatra, Ruby.</p>
 <p>-Connected & stores Data in SQL with Sanitise measure implemented.</p>
 <p>-Password Protected, With BCrypt.</p>
 <p>-Dad Jokes data collected from API.</p>
