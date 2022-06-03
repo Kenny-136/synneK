@@ -6,10 +6,10 @@ https://floating-tor-64492.herokuapp.com/
 I am making a CRUD APP, about one of small thing i enjoy in life, which is a 'dad jokes'.
 i am coding this application with Ruby Sinatra, using MVC design pattern.
 
--Full stack CRUD application based on Sinatra, Ruby.
--Connected & stores Data in SQL with Sanitise measure implemented.
--Password Protected, With BCrypt.
--Dad Jokes data collected from API.
+<p>-Full stack CRUD application based on Sinatra, Ruby.</p>
+<p>-Connected & stores Data in SQL with Sanitise measure implemented.</p>
+<p>-Password Protected, With BCrypt.</p>
+<p>-Dad Jokes data collected from API.</p>
 
 
 <h1>Plan Overview </h1>
