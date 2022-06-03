@@ -2,7 +2,7 @@ This is link will connect you to the app.
 (Because it is hosted on heroku, it will take 10 seconds to load it for the first time)
 https://floating-tor-64492.herokuapp.com/
 
-<h1>This is my 2nd Project in Software Engineering Immersive Course with Genereal Assembly.</h1>
+<h1>This is my 2nd Project in Software Engineering Immersive Course with General Assembly.</h1>
 I am making a CRUD APP, about one of small thing i enjoy in life, which is a 'dad jokes'.
 i am coding this application with Ruby Sinatra, using MVC design pattern.
 
