@@ -1,6 +1,6 @@
 <p>This is link will connect you to the app.</p>
 <p>Because it is hosted on heroku, it will take 10 seconds to load</p>
-https://floating-tor-64492.herokuapp.com/
+https://dadjokes.herokuapp.com/
 
 <h1>This is my 2nd Project in Software Engineering Immersive Course with General Assembly.</h1>
 I am making a CRUD APP, about one of small thing i enjoy in life, which is a 'dad jokes'.
